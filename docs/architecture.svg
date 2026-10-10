@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" width="100%" height="100%">
+  <style>
+    .title { font-family: system-ui, sans-serif; font-weight: 700; font-size: 20px; fill: #1e293b; }
+    .box-title { font-family: system-ui, sans-serif; font-weight: 600; font-size: 14px; fill: #334155; }
+    .node-text { font-family: system-ui, sans-serif; font-size: 12px; fill: #0f172a; }
+    .subtext { font-family: system-ui, sans-serif; font-size: 11px; fill: #64748b; }
+    .box { rx: 8; stroke-width: 1.5; }
+    .flow-line { stroke: #64748b; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    .dash-line { stroke: #ef4444; stroke-width: 2; stroke-dasharray: 4,4; fill: none; marker-end: url(#red-arrow); }
+  </style>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+    <marker id="red-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="480" y="32" text-anchor="middle" class="title">ClimateShield AI System Architecture</text>
+  <text x="480" y="52" text-anchor="middle" class="subtext">Transparent Rule-Based Rainfall Risk Indicator &amp; Preparedness Platform</text>
+
+  <!-- Layer 1: UI Layer -->
+  <rect x="40" y="70" width="880" height="110" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="60" y="95" class="box-title">1. Presentation Layer (app.py - Streamlit Thin Client)</text>
+  
+  <rect x="60" y="110" width="260" height="55" rx="6" fill="#e0f2fe" stroke="#0284c7" class="box"/>
+  <text x="190" y="132" text-anchor="middle" class="node-text" font-weight="600">Sidebar Controls</text>
+  <text x="190" y="150" text-anchor="middle" class="subtext">Presets, Search, Sliders, Synthetic Toggle</text>
+
+  <rect x="350" y="110" width="260" height="55" rx="6" fill="#fef3c7" stroke="#d97706" class="box"/>
+  <text x="480" y="132" text-anchor="middle" class="node-text" font-weight="600">Status &amp; Disclaimer Banner</text>
+  <text x="480" y="150" text-anchor="middle" class="subtext">LIVE / CACHED / SYNTHETIC Badge</text>
+
+  <rect x="640" y="110" width="260" height="55" rx="6" fill="#f1f5f9" stroke="#64748b" class="box"/>
+  <text x="770" y="132" text-anchor="middle" class="node-text" font-weight="600">6 Functional Tabs</text>
+  <text x="770" y="150" text-anchor="middle" class="subtext">Overview, Charts, Risk, Guide, Compare, About</text>
+
+  <!-- Layer 2: Data Ingestion & Synthetic -->
+  <rect x="40" y="210" width="880" height="120" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="60" y="235" class="box-title">2. Data Layer (data.py) &amp; Synthetic Scenarios (synthetic.py)</text>
+
+  <rect x="60" y="250" width="250" height="65" rx="6" fill="#ecfdf5" stroke="#059669" class="box"/>
+  <text x="185" y="272" text-anchor="middle" class="node-text" font-weight="600">Open-Meteo APIs (Live)</text>
+  <text x="185" y="290" text-anchor="middle" class="subtext">Geocoding + Weather Forecast (Auto Units)</text>
+
+  <rect x="345" y="250" width="270" height="65" rx="6" fill="#fdf4ff" stroke="#c026d3" class="box"/>
+  <text x="480" y="272" text-anchor="middle" class="node-text" font-weight="600">In-Memory Caching &amp; Fallback</text>
+  <text x="480" y="290" text-anchor="middle" class="subtext">5-min TTL Cache + Last-Good Fallback</text>
+
+  <rect x="650" y="250" width="250" height="65" rx="6" fill="#fff7ed" stroke="#ea580c" class="box"/>
+  <text x="775" y="272" text-anchor="middle" class="node-text" font-weight="600">Seeded Synthetic Generator</text>
+  <text x="775" y="290" text-anchor="middle" class="subtext">Cyclone Burst / Monsoon / Dry (Deterministic)</text>
+
+  <!-- Layer 3: Heuristic Engine -->
+  <rect x="40" y="360" width="880" height="110" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="60" y="385" class="box-title">3. Heuristic Engine (risk.py - Pure Functions, No ML)</text>
+
+  <rect x="60" y="400" width="260" height="55" rx="6" fill="#eff6ff" stroke="#3b82f6" class="box"/>
+  <text x="190" y="422" text-anchor="middle" class="node-text" font-weight="600">Factor Extraction</text>
+  <text x="190" y="440" text-anchor="middle" class="subtext">24h/72h rain, peak intensity, prob, wet hrs</text>
+
+  <rect x="350" y="400" width="260" height="55" rx="6" fill="#eff6ff" stroke="#3b82f6" class="box"/>
+  <text x="480" y="422" text-anchor="middle" class="node-text" font-weight="600">Weighted Normalization (0-100)</text>
+  <text x="480" y="440" text-anchor="middle" class="subtext">Low / Moderate / High / Severe Bands</text>
+
+  <rect x="640" y="400" width="260" height="55" rx="6" fill="#eff6ff" stroke="#3b82f6" class="box"/>
+  <text x="770" y="422" text-anchor="middle" class="node-text" font-weight="600">Stability &amp; Stress Tests</text>
+  <text x="770" y="440" text-anchor="middle" class="subtext">Sensitivity (±20%) &amp; What-If Scaler</text>
+
+  <!-- Layer 4: Output & Preparedness -->
+  <rect x="40" y="500" width="880" height="100" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="60" y="525" class="box-title">4. Action &amp; Guidance Outputs (charts.py / guidance.py)</text>
+
+  <rect x="60" y="535" width="260" height="50" rx="6" fill="#f0fdf4" stroke="#16a34a" class="box"/>
+  <text x="190" y="557" text-anchor="middle" class="node-text" font-weight="600">Plotly Visualizations</text>
+  <text x="190" y="573" text-anchor="middle" class="subtext">Meteogram, Heatmap, Gauges, Map</text>
+
+  <rect x="350" y="535" width="260" height="50" rx="6" fill="#f0fdf4" stroke="#16a34a" class="box"/>
+  <text x="480" y="557" text-anchor="middle" class="node-text" font-weight="600">Tiered Bilingual Guidance</text>
+  <text x="480" y="573" text-anchor="middle" class="subtext">Checklist &amp; WhatsApp Brief (EN / தமிழ்)</text>
+
+  <rect x="640" y="535" width="260" height="50" rx="6" fill="#f0fdf4" stroke="#16a34a" class="box"/>
+  <text x="770" y="557" text-anchor="middle" class="node-text" font-weight="600">Official Directives</text>
+  <text x="770" y="573" text-anchor="middle" class="subtext">IMD, TNDSMA (1070/1077), NDMA, WMO</text>
+
+  <!-- Connectors -->
+  <path d="M 190 165 L 190 250" class="flow-line"/>
+  <path d="M 310 282 L 345 282" class="flow-line"/>
+  <path d="M 480 315 L 480 400" class="flow-line"/>
+  <path d="M 775 165 L 775 250" class="flow-line"/>
+  <path d="M 775 315 L 775 400" class="flow-line"/>
+  <path d="M 190 455 L 190 535" class="flow-line"/>
+  <path d="M 480 455 L 480 535" class="flow-line"/>
+  <path d="M 770 455 L 770 535" class="flow-line"/>
+  <path d="M 310 300 Q 325 330 350 305" class="dash-line"/>
+</svg>
