@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🛡️ ClimateShield AI
 
 > **Explainable Rainfall Risk Indicator & Preparedness Decision-Support Platform**  
@@ -160,3 +161,6 @@ Open your browser at `http://localhost:8501`.
 
 - Weather forecasts powered by the [Open-Meteo Weather API](https://open-meteo.com/).
 - Weather data provided under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+=======
+# ClimateShield-Ai
+>>>>>>> 8960364d948f7310a116224c1f0b5aad4f95ea73
